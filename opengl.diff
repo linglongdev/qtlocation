@@ -1,0 +1,16 @@
+Description: detect OpenGL correctly
+Author: Dmitry Shachnev <mitya57@debian.org>
+Forwarded: no
+Last-Update: 2022-03-07
+
+--- a/src/location/configure.json
++++ b/src/location/configure.json
+@@ -9,7 +9,7 @@
+             "label": "Qt.labs.location experimental QML plugin",
+             "purpose": "Provides experimental QtLocation QML types",
+             "section": "Location",
+-            "condition": "config.opengl",
++            "condition": "features.opengl",
+             "output": [ "privateFeature" ]
+         },
+         "geoservices_osm": {

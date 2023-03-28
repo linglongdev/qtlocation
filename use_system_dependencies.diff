@@ -1,0 +1,27 @@
+Description: remove some include paths to pick up system headers
+Author: Dmitry Shachnev <mitya57@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-04-27
+
+--- a/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro
++++ b/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro
+@@ -406,8 +406,6 @@ HEADERS += \
+     platform/qt/src/timer_impl.hpp \
+ 
+ INCLUDEPATH += \
+-    deps/boost/1.65.1 \
+-    deps/boost/1.65.1/include \
+     deps/earcut/0.12.4 \
+     deps/earcut/0.12.4/include \
+     deps/geojson/0.4.2 \
+@@ -422,10 +420,6 @@ INCLUDEPATH += \
+     deps/optional/f27e7908/include \
+     deps/polylabel/1.0.3 \
+     deps/polylabel/1.0.3/include \
+-    deps/protozero/1.5.2 \
+-    deps/protozero/1.5.2/include \
+-    deps/rapidjson/1.1.0 \
+-    deps/rapidjson/1.1.0/include \
+     deps/shelf-pack/2.1.1 \
+     deps/shelf-pack/2.1.1/include \
+     deps/supercluster/0.2.2 \

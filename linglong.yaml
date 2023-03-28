@@ -1,0 +1,28 @@
+package:
+  id: qtlocation
+  kind: lib
+  version: 5.11.3
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+depends:
+- id: qtbase
+  version: 5.11.3.15
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/qtlocation-opensource-src.git
+  version: uos/5.11.3
+  commit: e374b54e1bb702d48948f941713176449dfae9b6
+
+  patch:
+  - use_system_dependencies.diff
+  - hurd_geoclue.diff
+  - mapboxgl_thread_portability.diff
+  - geoclue2_fix_position_handling.diff
+  - opengl.diff
+  - add-sunway-support.patch
+build:
+  kind: qmake

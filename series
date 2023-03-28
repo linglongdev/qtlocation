@@ -1,0 +1,6 @@
+use_system_dependencies.diff
+hurd_geoclue.diff
+mapboxgl_thread_portability.diff
+geoclue2_fix_position_handling.diff
+opengl.diff
+add-sunway-support.patch
